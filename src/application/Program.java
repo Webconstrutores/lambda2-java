@@ -25,8 +25,7 @@ public class Program {
 		System.out.print("Search product by price less than: ");
 		double min = sc.nextDouble();
 		
-		Predicate<Product> pred = p -> p.getPrice() >= min; 
-		list.removeIf(pred);
+		list.removeIf(p -> p.getPrice() >= min);
 		
 		for(Product p : list) {
 			System.out.println(p.toString());
